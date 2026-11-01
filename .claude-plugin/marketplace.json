@@ -1,0 +1,14 @@
+{
+  "name": "sheet2musicxml",
+  "description": "Sheet to MusicXML for Claude Code",
+  "owner": {
+    "name": "mrkm86"
+  },
+  "plugins": [
+    {
+      "name": "sheet2musicxml",
+      "source": "./",
+      "description": "Transcribe score images and PDFs into editable MusicXML."
+    }
+  ]
+}

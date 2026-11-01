@@ -1,0 +1,20 @@
+{
+  "name": "sheet2musicxml",
+  "interface": {
+    "displayName": "Sheet to MusicXML"
+  },
+  "plugins": [
+    {
+      "name": "sheet2musicxml",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

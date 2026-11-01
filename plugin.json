@@ -1,0 +1,29 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "sheet2musicxml",
+  "version": "0.1.0",
+  "description": "Transcribe sheet music images and PDFs into editable MusicXML without requiring a particular notation editor.",
+  "author": {
+    "name": "mrkm86"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Sheet to MusicXML",
+        "shortDescription": "Score images to MusicXML",
+        "longDescription": "Transcribe sheet music PDFs, scans, screenshots, and photos into editable MusicXML. Includes source-first review and structural checks for pitches, ties, slurs, chords, and measure lengths. MuseScore and Dorico are optional editors, not dependencies.",
+        "developerName": "mrkm86",
+        "category": "Productivity",
+        "capabilities": [
+          "Transcribe score images and PDFs into MusicXML",
+          "Review pitches, accidentals, rhythms, ties, and slurs",
+          "Check measure structure and chord-tone overlap"
+        ],
+        "defaultPrompt": [
+          "Convert this sheet music PDF or image to MusicXML.",
+          "Review this MusicXML against the attached score images."
+        ]
+      }
+    }
+  }
+}

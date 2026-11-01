@@ -1,0 +1,8 @@
+{
+  "name": "sheet2musicxml",
+  "version": "0.1.0",
+  "description": "Transcribe sheet music images and PDFs into editable MusicXML without requiring a particular notation editor.",
+  "author": {
+    "name": "mrkm86"
+  }
+}

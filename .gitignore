@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.heic
+*.tif
+*.tiff
+*.mscx
+*.mscz
+*.mid
+*.mxl
+*.musicxml
+output/
+tmp/
