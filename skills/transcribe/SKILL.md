@@ -30,3 +30,5 @@ Run these scripts from this skill's `scripts/` directory with Python 3; they use
 - `audit_chord_voicings.py OUTPUT.musicxml --harmony-part P2`: chord-tone overlap at chord changes. This is a review aid; passing notes and omissions can be correct.
 
 The conversion workflow needs a way to read the supplied images. The optional scripts need Python 3. OMR, PDF rendering software, and notation editors are interchangeable aids rather than package dependencies.
+
+If the user supplies a corrected MuseScore file or asks for editor-specific playback and layout review, read [editor-validation.md](references/editor-validation.md). Those checks are optional and do not change the MusicXML deliverable.

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "sheet2musicxml",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Transcribe sheet music images and PDFs into editable MusicXML without requiring a particular notation editor.",
   "author": {
     "name": "mrkm86"

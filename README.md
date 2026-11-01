@@ -32,6 +32,8 @@ Attach an ordered score PDF or one or more score images and ask the agent to con
 
 The bundled checkers use Python 3's standard library. PDF rendering and OMR may require tools available on the user's machine, but no specific tool is required by this package. If the source is too blurry to read reliably, the agent should identify the affected measures and request a clearer image rather than inventing notes.
 
+Optional MuseScore-native comparison scripts are included for users who provide `.mscz` corrections or request app-specific validation. They are not part of the required conversion path.
+
 ## Scope
 
 This repository covers source images through an editable MusicXML file. App-native project files and editor-specific playback settings are optional follow-up work. MusicXML import behavior can vary between notation editors; the score image remains the authority for transcription accuracy.
