@@ -11,7 +11,7 @@ The required output is a `.musicxml` file. MuseScore, Dorico, or another score e
 
 ## Workflow
 
-1. Establish page order. Render PDF pages or inspect images at a resolution that exposes accidentals, dots, beams, ties, slurs, and rests. Correct photo rotation or perspective if necessary. Record each system's measure range, staff order, key and time signatures, clefs, transpositions, repeats, rehearsal marks, and double barlines.
+1. Establish page order. Render PDF pages or inspect images at a resolution that exposes accidentals, dots, beams, ties, slurs, and rests. Correct photo rotation or perspective if necessary; for photographed pages read pitches against staff-following guide lines (see [notation-quality.md](references/notation-quality.md)). Record each system's measure range, staff order, key and time signatures, clefs, transpositions, repeats, rehearsal marks, and double barlines.
 2. Obtain a first draft with an available OMR tool when useful, or transcribe directly from the image. Never require one named OMR model or a local installation. If a combined read confuses adjacent staves, crop and read the affected staff or system separately.
 3. Compare every measure with the source. Check individual note and rest durations, not just the measure total. Resolve ambiguous pitches and accidentals from enlarged source crops. For transposing parts, compare the printed key on each page and system with the draft and inspect each resulting MusicXML `<pitch><alter>`. A printed double sharp needs `<alter>2</alter>` and, when the glyph is explicit, `<accidental>double-sharp</accidental>`.
 4. Trace every source tie and slur to its endpoints. Ties must join the same sounding pitch and use both `<tie>` and `<notations><tied>`; a visual slur is not a tie. Check every pitch of a tied chord. Keep separate slurs when two arcs occur in one bar or phrase, including overlaps and system crossings. Read [notation-quality.md](references/notation-quality.md) for the detailed review criteria.
@@ -28,6 +28,7 @@ Run these scripts from this skill's `scripts/` directory with Python 3; they use
 - `check_slurs.py OUTPUT.musicxml`: slur endpoints and bars containing multiple arcs. It cannot discover a missing arc on its own.
 - `audit_omr_pitches.py PAGE.musicxml OUTPUT.musicxml ...`: key and pitch differences between an OMR page and the joined score.
 - `audit_chord_voicings.py OUTPUT.musicxml --harmony-part P2`: chord-tone overlap at chord changes. This is a review aid; passing notes and omissions can be correct.
+- `optional_image/staff_grid.py PAGE.png X Y W H OUT.png --clefs G,F`: labelled pitch guides that follow curved or tilted staves in a crop. Needs Pillow and NumPy; not part of the standard-library checks.
 
 The conversion workflow needs a way to read the supplied images. The optional scripts need Python 3. OMR, PDF rendering software, and notation editors are interchangeable aids rather than package dependencies.
 
