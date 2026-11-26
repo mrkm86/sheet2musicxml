@@ -30,7 +30,7 @@ The skill appears as `/sheet2musicxml:transcribe`. See the [Claude Code plugin g
 
 Attach an ordered score PDF or one or more score images and ask the agent to convert them to MusicXML. For example: “Convert these four score pages to MusicXML and review the ties and accidentals against the images.”
 
-The bundled checkers use Python 3's standard library. PDF rendering and OMR may require tools available on the user's machine, but no specific tool is required by this package. If the source is too blurry to read reliably, the agent should identify the affected measures and request a clearer image rather than inventing notes.
+The bundled checkers use Python 3's standard library. An optional image helper, `scripts/optional_image/staff_grid.py`, draws staff-following pitch guides on photographed pages and needs Pillow and NumPy. PDF rendering and OMR may require tools available on the user's machine, but no specific tool is required by this package. If the source is too blurry to read reliably, the agent should identify the affected measures and request a clearer image rather than inventing notes.
 
 Optional MuseScore-native comparison scripts are included for users who provide `.mscz` corrections or request app-specific validation. They are not part of the required conversion path.
 
